@@ -1,0 +1,14 @@
+.DS_Store
+*.xlsx
+*.csv
+*.joblib
+*.png
+*.mdb
+*.log
+/.vscode
+*.pyc
+*.pth
+*.json
+*.err
+*.out
+*.db

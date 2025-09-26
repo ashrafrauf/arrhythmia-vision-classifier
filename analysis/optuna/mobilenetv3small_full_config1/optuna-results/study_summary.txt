@@ -1,0 +1,13 @@
+Study: optuna_ecg_mobilenetv3small_full_config1
+Trials: 300
+Best Trial: #205
+F1 Score: 0.9449
+Params: {
+    "optimizer_name": "AdamW",
+    "learning_rate": 0.007080631873307418,
+    "weight_decay": 1.2119911190722481e-05,
+    "batch_size": 32,
+    "scheduler_name": "ReduceLROnPlateau",
+    "scheduler_reduce_factor": 0.12022611057297193,
+    "scheduler_reduce_patience": 4
+}

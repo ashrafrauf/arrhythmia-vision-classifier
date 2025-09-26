@@ -1,0 +1,11 @@
+Study: optuna_ecg_resnet18_full_config1
+Trials: 326
+Best Trial: #275
+F1 Score: 0.9577
+Params: {
+    "optimizer_name": "AdamW",
+    "learning_rate": 0.006193427980513606,
+    "weight_decay": 5.802064515448046e-06,
+    "batch_size": 32,
+    "scheduler_name": "OneCycleLR"
+}

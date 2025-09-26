@@ -1,0 +1,11 @@
+Study: optuna_ecg_convnextbase_full_config2
+Trials: 60
+Best Trial: #58
+F1 Score: 0.9641
+Params: {
+    "optimizer_name": "AdamW",
+    "learning_rate": 0.00028395063566280456,
+    "weight_decay": 7.762570861316647e-05,
+    "batch_size": 32,
+    "scheduler_name": "OneCycleLR"
+}

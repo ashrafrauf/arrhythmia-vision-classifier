@@ -1,0 +1,13 @@
+Study: optuna_ecg_resnet18_full_config2
+Trials: 400
+Best Trial: #65
+F1 Score: 0.9638
+Params: {
+    "optimizer_name": "AdamW",
+    "learning_rate": 0.0010110141888612758,
+    "weight_decay": 1.4095801420726664e-07,
+    "batch_size": 32,
+    "scheduler_name": "ReduceLROnPlateau",
+    "scheduler_reduce_factor": 0.387413109377374,
+    "scheduler_reduce_patience": 6
+}

@@ -1,0 +1,72 @@
+# Preliminaries arguments.
+dataset_ver: config1
+lmdb_path: /users/userid/archive/ecg-cnn-data/processed-data/config1/train/img_resnet.lmdb
+csv_path: /users/userid/archive/ecg-cnn-data/processed-data/config1/train/labels_keys.csv
+val_ratio: 0.2
+
+# Architecture arguments.
+model_arch: mobilenetv3small
+freeze_backbone: False
+state_dict_folder: 250822_2358_mobilenetv3small_head_config1
+scheduler_step: 20
+scheduler_gamma: 0.5
+scheduler_reduce_factor: 0.12
+scheduler_reduce_patience: 5
+
+# --- Training arguments ---
+max_epoch: 110
+eval_metric: f1
+early_stop: True
+stop_patience: 10
+stop_min_delta: 0.0
+stop_min_epoch: 50
+num_workers: 2
+random_state: 42
+
+# --- Utility arguments ---
+save_checkpoints: False
+save_bestmodel: False
+checkpoint_interval: 20
+cleanup_interval: 20
+verbose: False
+
+
+
+
+
+#-------------------- #
+# Hyperparameter Grid #
+#-------------------- #
+total_folds: 5
+
+layer_init:
+  - None
+  # - xavier_uniform
+  # - kaiming_normal
+
+optimizer_name:
+  - AdamW
+  # - SGD
+
+opt_learning_rate:
+  - 0.007
+  - 0.009
+  - 0.005
+  - 0.0025
+
+opt_weight_decay:
+  - 0.00001
+  - 0.000005
+  - 0.0
+  - 0.05
+
+scheduler_name:
+  # - None
+  # - StepLR
+  - ReduceLROnPlateau
+  - OneCycleLR
+
+batch_size:
+  - 32
+  # - 64
+  # - 128
