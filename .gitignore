@@ -12,3 +12,5 @@
 *.err
 *.out
 *.db
+analysis/notebook/3_sviz_config1.ipynb
+analysis/notebook/3_sviz_config2.ipynb
