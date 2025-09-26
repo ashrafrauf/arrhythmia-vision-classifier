@@ -294,6 +294,8 @@ def get_model_info(
             model_stats_info = torchinfo.summary(cnn_model, input_size=(1, 3, 300, 300), verbose=0, device=device,
                                                  col_names = ["input_size", "output_size", "num_params", "params_percent", "kernel_size", "mult_adds"])
             # ... except for MACs, use thop. torchinfo MAC calculation for convnextbase is inaccurate.
+            # See GitHub issue: https://github.com/TylerYep/torchinfo/issues/126
+            # Also see: https://github.com/TylerYep/torchinfo/issues/312
             input = torch.randn(1, 3, 300, 300).to(device)
             macs, _ = profile(cnn_model, inputs=(input, ))
         else:
