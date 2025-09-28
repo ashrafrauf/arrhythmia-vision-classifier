@@ -23,7 +23,7 @@ Alternatively, the dataset is also available on PhysioNet here: https://doi.org/
 ```
  raw-data
  ┣ ecg-data-raw
- ┣ ecg-data-denoised
+ ┗ ecg-data-denoised
 ```
 
 <br>

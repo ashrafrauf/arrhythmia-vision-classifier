@@ -23,7 +23,7 @@ final-results
  ┃ ┣ model-retrain-cache
  ┃ ┣ slurm-logs
  ┃ ┃ ┣ err
- ┃ ┃ ┣ out
+ ┃ ┃ ┗ out
  ┃ ┣ best_model_config.json
  ┃ ┣ best_model_retrained.pth
  ┃ ┣ consol_grid_results_detailed.csv
@@ -36,7 +36,7 @@ final-results
  ┃ ┣ model-retrain-cache
  ┃ ┣ slurm-logs
  ┃ ┃ ┣ err
- ┃ ┃ ┣ out
+ ┃ ┃ ┗ out
  ┃ ┣ best_model_config.json
  ┃ ┣ best_model_retrained.pth
  ┃ ┣ consol_grid_results_detailed.csv

@@ -22,24 +22,24 @@ optuna
  ┃ ┃ ┣ best_trial.json
  ┃ ┃ ┣ optuna_study.db
  ┃ ┃ ┗ study_summary.txt
- ┃ ┣ slurm-logs
- ┃ ┃ ┣ err
- ┃ ┃ ┗ out
+ ┃ ┗ slurm-logs
+ ┃   ┣ err
+ ┃   ┗ out
  ┃
- ┣ efficientnetb3_full_config1
- ┃ ┣ final-models
- ┃ ┃ ┣ best
- ┃ ┃ ┗ cache
- ┃ ┣ grid-results
- ┃ ┣ local-logs
- ┃ ┃ ┣ err
- ┃ ┃ ┗ out
- ┃ ┣ optuna-results
- ┃ ┃ ┣ best_trial.json
- ┃ ┃ ┣ optuna_study.db
- ┃ ┃ ┗ study_summary.txt
- ┃ ┣ slurm-logs
- ┃ ┃ ┣ err
- ┃ ┃ ┗ out
+ ┗ efficientnetb3_full_config1
+   ┣ final-models
+   ┃ ┣ best
+   ┃ ┗ cache
+   ┣ grid-results
+   ┣ local-logs
+   ┃ ┣ err
+   ┃ ┗ out
+   ┣ optuna-results
+   ┃ ┣ best_trial.json
+   ┃ ┣ optuna_study.db
+   ┃ ┗ study_summary.txt
+   ┗ slurm-logs
+     ┣ err
+     ┗ out
 
 ```

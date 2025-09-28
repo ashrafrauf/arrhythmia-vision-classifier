@@ -25,21 +25,21 @@ Each config is stored in its own directory, with the following structure:
  ┃ ┣ test
  ┃ ┃ ┣ img_efficientnet.lmdb
  ┃ ┃ ┣ img_resnet.lmdb
- ┃ ┃ ┣ png-files
- ┃ ┣ train
- ┃ ┃ ┣ img_efficientnet.lmdb
- ┃ ┃ ┣ img_resnet.lmdb
- ┃ ┃ ┣ png-files
+ ┃ ┃ ┗ png-files
+ ┃ ┗ train
+ ┃   ┣ img_efficientnet.lmdb
+ ┃   ┣ img_resnet.lmdb
+ ┃   ┗ png-files
  ┃
- ┣ config1
- ┃ ┣ test
- ┃ ┃ ┣ img_efficientnet.lmdb
- ┃ ┃ ┣ img_resnet.lmdb
- ┃ ┃ ┣ png-files
- ┃ ┣ train
- ┃ ┃ ┣ img_efficientnet.lmdb
- ┃ ┃ ┣ img_resnet.lmdb
- ┃ ┃ ┣ png-files
+ ┗ config1
+   ┣ test
+   ┃ ┣ img_efficientnet.lmdb
+   ┃ ┣ img_resnet.lmdb
+   ┃ ┗ png-files
+   ┗ train
+     ┣ img_efficientnet.lmdb
+     ┣ img_resnet.lmdb
+     ┗ png-files
  ```
 
  Note that the `img_resnet.lmdb` represents the dataset containing 224x224 images, while the `img_efficientnet.lmdb` contains 300x300 images. The naming conventions were unfortunately due to initial experiments using ResNet-18 and EfficientNet-B3 models.
