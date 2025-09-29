@@ -16,4 +16,4 @@ analysis/notebook/3_sviz_config1.ipynb
 analysis/notebook/3_sviz_config2.ipynb
 
 # --- FOLDER EXCEPTIONS ---
-!assets/
+!analysis/notebook/report-figures
