@@ -138,8 +138,8 @@ _*Lead II results were used as the authors noted that it showed the best perform
 ### Vision-based Methods on Different Dataset
 | Paper / Study                 | Model                          | No. of Labels | Acc.   | F1     | Rec.   | Prec.  |
 |------------------------------|-------------------------------|---------------|--------|-------|-------|-------|
-| This study.                  | ConvNeXt-base (Config 1)       | 4             | 0.966  | 0.961 | 0.960 | 0.962 |
-|                              | ConvNeXt-base (Config 2)       | 4             | 0.961  | 0.956 | 0.955 | 0.957 |
+| This study                   | ConvNeXt-base (Config 1)       | 4             | 0.966  | 0.961 | 0.960 | 0.962 |
+| This study                   | ConvNeXt-base (Config 2)       | 4             | 0.961  | 0.956 | 0.955 | 0.957 |
 | Degirmenci et al. (2022)^    | Custom 2D-CNN                  | 5             | 0.997  | 0.992 | 0.997 | 0.995 |
 | Sangha et al. (2022)^,*      | EfficientNet-B3                | 6             | 0.989  | 0.735 | 0.817 | 0.672 |
 | Li et al. (2022)             | Ensemble of DSE-ResNet         | 9             | 0.965  | 0.817 | 0.803 | 0.845 |
