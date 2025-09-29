@@ -172,7 +172,7 @@ Sangha, V., Mortazavi, B.J., Haimovich, A.D., Ribeiro, A.H., Brandt, C.A., Jacob
 
 TorchVision maintainers and contributors (2016) TorchVision: PyTorch’s Computer Vision library (Version 0.20.1). Available at: https://github.com/pytorch/vision (Accessed: 10 September 2025).
 
-Yao, Q., Wang, R., Fan, X., Liu, J., and Li, Y. (2020) ‘Multi-class Arrhythmia detection from 12-lead varied-length ECG using Attention-based Time-Incremental Convolutional Neural Network’, Information Fusion, 53, pp. 174–182. Available at: https://doi.org/10.1016/j.inKus.2019.06.024.
+Yao, Q., Wang, R., Fan, X., Liu, J., and Li, Y. (2020) ‘Multi-class Arrhythmia detection from 12-lead varied-length ECG using Attention-based Time-Incremental Convolutional Neural Network’, Information Fusion, 53, pp. 174–182. Available at: https://doi.org/10.1016/j.inffus.2019.06.024.
 
 Yep, T. (2020) torchinfo (Version 1.8.0). Available at: https://github.com/TylerYep/torchinfo (Accessed: September 18, 2025).
 
