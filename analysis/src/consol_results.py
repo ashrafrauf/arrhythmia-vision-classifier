@@ -239,11 +239,11 @@ if __name__ == "__main__":
 
     # Identify scipt location and project directory.
     script_dir = os.path.dirname(os.path.abspath(__file__))  # src folder
-    project_dir = os.path.dirname(script_dir)  # ecg-cnn-home folder
+    project_dir = os.path.dirname(script_dir)  # analysis folder
     
     # Identify location of main data directory.
     if args.runtime_env=='local':
-        main_data_dir = '/Users/ashrafrauf/Documents/GitHub/arrhythmia-vision-classifier/data'
+        main_data_dir = os.path.join(os.path.dirname(project_dir), 'data')
     elif args.runtime_env=='slurm':
         main_data_dir = '/users/userid/archive/ecg-cnn-data'
 
@@ -258,12 +258,10 @@ if __name__ == "__main__":
     cache_dir = os.path.join(main_res_dir, "model-retrain-cache")
     slurm_logs_out_dir = os.path.join(main_res_dir, "slurm-logs", "out")
     slurm_logs_err_dir = os.path.join(main_res_dir, "slurm-logs", "err")
-    saliency_viz_dir = os.path.join(main_res_dir, "viz-saliency")
 
     os.makedirs(main_res_dir, exist_ok=True)
     os.makedirs(slurm_logs_out_dir, exist_ok=True)
     os.makedirs(slurm_logs_err_dir, exist_ok=True)
-    os.makedirs(saliency_viz_dir, exist_ok=True)
     
     # Run main script.
     consolidate_experiments(

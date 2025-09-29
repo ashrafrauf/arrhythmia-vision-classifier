@@ -12,8 +12,8 @@ import ecg_utils
 
 def grid_search_local(
         experiment_folder,
-        path_to_lmdb,
-        path_to_csv
+        experiment_model,
+        dataset_config
 ):
     """
     Implements grid search optimisation on the local machine. Due to unexpected behaviour of 
@@ -26,12 +26,16 @@ def grid_search_local(
     # Identify scipt location and project directory.
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_dir = os.path.dirname(script_dir)
+    main_data_dir = os.path.join(os.path.dirname(project_dir), 'data')
 
     # Identify relevant folders.
     path_to_grid_results = os.path.join(project_dir, "experiments", experiment_folder, "grid-results")
     path_to_configs = os.path.join(project_dir, "experiments", experiment_folder, "configs")
     path_to_logs = os.path.join(project_dir, "experiments", experiment_folder, "local-logs")
     path_to_train_script = os.path.join(project_dir, "src", "cnn_train.py")
+
+    # Get dataset paths.
+    path_to_lmdb, path_to_csv = ecg_utils.get_dataset_paths(main_data_dir, experiment_model, dataset_config, 'train')
 
     # Get hyperparameter grid.
     grid_config_filepath = os.path.join(path_to_configs, "slurm_job_array_manifest.json")
@@ -131,15 +135,8 @@ if __name__ == "__main__":
     dataset_config = experiment_metadata[-1]
     experiment_model = experiment_metadata[-3]
 
-    if experiment_model == 'efficientnetb3':
-        lmdb_path = f'/Users/ashrafrauf/Documents/GitHub/arrhythmia-vision-classifier/data/processed-data/{dataset_config}/train/img_efficientnet.lmdb'
-    else:
-        lmdb_path = f'/Users/ashrafrauf/Documents/GitHub/arrhythmia-vision-classifier/data/processed-data/{dataset_config}/train/img_resnet.lmdb'
-    
-    csv_path = f'/Users/ashrafrauf/Documents/GitHub/arrhythmia-vision-classifier/data/processed-data/{dataset_config}/train/labels_keys.csv'
-
     grid_search_local(
         args.experiment_folder,
-        lmdb_path,
-        csv_path
+        experiment_model,
+        dataset_config,
     )
