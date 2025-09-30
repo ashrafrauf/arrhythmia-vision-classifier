@@ -16,6 +16,7 @@ from tqdm import tqdm
 
 
 # The function below relied on the package's documentation, found here: http://www.lmdb.tech/doc/starting.html
+# The tutorial here was also helpful: https://realpython.com/storing-images-in-python/
 # Also inspiration was taken from this forum post: https://stackoverflow.com/questions/39557118/creating-lmdb-file-in-the-right-way
 def generate_lmdb_dataset(
         image_dir,
