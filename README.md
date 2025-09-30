@@ -1,6 +1,6 @@
 # Vision-based Arrhythmia Classifier
 
-_Exploring computer vision-based approached in prediciting arrhythmias_
+_Exploring computer vision-based approaches in prediciting arrhythmias_
 
 ## Project Summary
 This repo contains the folder template and key materials used to explore computer vision-based approaches to predict arrhythmias using a dataset containing 12-lead ECG recordings. This study opted to focus on pre-trained vision-based CNN models from the torchvision model zoo, using ECG recordings visualised as ECG charts. While the study explored eight different models, the code can easily be extended to included additional models. The study found that fine-tuning pre-trained models can generally lead to high-performing results, although the marginal increase in performance gain is less than proportional to the marginal increase in compute required (see figure below). This has implications for real-life deployments - certain applications may be resource constrained while other may be conscious of expanding carbon footprint via higher power consumption. The study also qualitatively assessed the use of Guided Grad-CAM as an explainability tool, and found it wanting as a diagnostic tool due to limited fidelity.
@@ -16,7 +16,7 @@ This repo contains the folder template and key materials used to explore compute
 <br><br/>
 
 ## Requirements
-Packages required for this study is listed in the `environment.yml` file. Note that pytorch and torchvision packages are intentionally excluded - these depend on the specifics of the operating system and GPU used. See the yaml file for further information.
+Packages required for this study is listed in the `environment.yml` file. Note that PyTorch and TorchVision packages are intentionally excluded - these depend on the specifics of the operating system and GPU used. See the yaml file for further information.
 
 <br>
 
@@ -148,6 +148,16 @@ _*Lead II results were used as the authors noted that it showed the best perform
 | Jun et al. (2018)**          | Custom 2D-CNN                  | 8             | 0.991  | 0.979 | 0.986 | —     |
 
 _F1, recall, and precision scores are aggregated using macro-average unless indicated otherwise. Rec. – recall, Prec. – precision. ^Only sample-weighted aggregated scores are available. *Based on results for the hold-out test set. **Based on results with augmented data._
+
+<br>
+
+## Interesting Nuggets
+If you're here and still reading, here are some tidbits that hopefully you find interesting:
+- Commonly used in research papers, the number 42 is sometimes a playful nod to the classic book _The Hitchhiker’s Guide to the Galaxy_, in which the supercomputer Deep Thought famously answered ‘42’ when asked for the [ultimate answer to life, the universe, and everything](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker's_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)).
+- For a fun primer to ECG interpretations and arrhythmias, check out the Youtube video [ECG Basics | How to Read & Interpret ECGs: Updated Lecture](https://youtu.be/CNN30YHsJw0?si=NgwMQ_D4fOX6qQvC). There are also several other playlists on the [Ninja Nerd channel](https://www.youtube.com/@NinjaNerdOfficial/playlists) that goes a bit deeper.
+- Making experiments reproducible is _so, so, very difficult_ — (psuedo-)randomness can appear in unexpected places. Check out this Medium article _[Random Seeds and Reproducibility](https://medium.com/data-science/random-seeds-and-reproducibility-933da79446e3)_ where the author talks through step-by-step the potential sources reproducibility failures.
+- The term ‘ResNet’ is often used interchangeably to refer to both the [CNN model architecture introduced by He et al. (2015)](https://arxiv.org/abs/1512.03385) as well as the residual connection structure. For example, the DSE-ResNet in Li et al. (2022) uses the residual connection structure, but not the original ResNet CNN backbone.
+
 
 <br><br/>
 
