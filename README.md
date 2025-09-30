@@ -3,7 +3,7 @@
 _Exploring computer vision-based approaches in prediciting arrhythmias_
 
 ## Project Summary
-This repo contains the folder template and key materials used to explore computer vision-based approaches to predict arrhythmias using a dataset containing 12-lead ECG recordings. This study opted to focus on pre-trained vision-based CNN models from the torchvision model zoo, using ECG recordings visualised as ECG charts. While the study explored eight different models, the code can easily be extended to included additional models. The study found that fine-tuning pre-trained models can generally lead to high-performing results, although the marginal increase in performance gain is less than proportional to the marginal increase in compute required (see figure below). This has implications for real-life deployments - certain applications may be resource constrained while other may be conscious of expanding carbon footprint via higher power consumption. The study also qualitatively assessed the use of Guided Grad-CAM as an explainability tool, and found it wanting as a diagnostic tool due to limited fidelity.
+This repo contains the folder template and key materials used for the study: Exploring computer vision-based approaches in predicting arrhythmias using a dataset containing 12-lead ECG recordings. This study opted to focus on pre-trained vision-based CNN models from the torchvision model zoo, using ECG recordings visualised as ECG charts. While the study explored eight different models, the code can easily be extended to include additional models. The study found that fine-tuning pre-trained models can generally lead to high-performing results, although the marginal increase in performance gain is less than proportional to the marginal increase in compute required (see figure below). This has implications for real-life deployments - certain applications may be resource constrained while other may be conscious of expanding carbon footprint via higher power consumption. The study also qualitatively assessed the use of Guided Grad-CAM as an explainability tool, and found it wanting as a diagnostic tool due to limited fidelity.
 
 <img src="analysis/notebook/report-figures/discussion_1.png" alt="Comparison of number of parameters, model disk size, and multiply-accumulate operations relative to the macro-average F1 score obtained across the different models." width="1000"/>
 
@@ -42,7 +42,7 @@ python data/src/gen_lmdb_dataset.py --dataset_type=train --config_name=config1
 <br>
 
 ## Model Training and Evaluation
-This study optimises six key hyperparameters and retrain using the optimal configuration on the training set, then evaluates on the hold-out test set.
+This study optimises six key hyperparameters and retrains using the optimal configuration on the training set, then evaluates on the hold-out test set.
 - Hyperparameter optimisation is done in two stages. The first stage only optimises the classification head via a grid search. The second stage fine-tunes all layer, first by doing a Bayes search, followed by a grid search around the optimal configuration identified by the Bayes search.
 - All the training-related scripts are available in `analysis/src` - details for each script, including relevant arguments and expected output, are provided within each script and function's docstrings.
 - For this study, prototyping was done locally while the main experiments are conducted on the university's HPC. The slurm scripts are available in `analysis/slurm`.
@@ -62,7 +62,7 @@ python analysis/src/cnn_train_best_model.py --experiment_folder=250705_2105_resn
 ```
 <br>
 
-To run the Bayes search locally, execute the `optuna orchestrator.py` script, with a typical command below. Note that the absolute paths were used, and hence would need to be edited.
+To run the Bayes search locally, execute the `optuna orchestrator.py` script, with a typical command below. Note that the **absolute paths were used, and hence would need to be edited.**
 ```
 python analysis/src/optuna_orchestrator.py --model_arch=resnet18 --dataset_config=config1 --num_trials=25 --no_freeze_backbone --random_state=42 --num_workers=6 --state_dict_folder=250705_2105_resnet18_head_config1
 ```
